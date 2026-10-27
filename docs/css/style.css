@@ -1,0 +1,212 @@
+:root {
+  color-scheme: light;
+  font-family: Arial, sans-serif;
+  color: #18332b;
+  background: #f4f7f5;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  color: #e4eee8;
+  background: #111a16;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #b8c8bf;
+  background: #fff;
+}
+
+:root[data-theme="dark"] .site-header,
+:root[data-theme="dark"] .sidebar {
+  background: #1a2821;
+}
+
+.brand {
+  margin: 0;
+  color: inherit;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.brand span,
+.eyebrow {
+  color: #318464;
+}
+
+:root[data-theme="dark"] .brand span,
+:root[data-theme="dark"] .eyebrow {
+  color: #76c69b;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-label,
+.intro,
+.content-panel p {
+  color: #60766d;
+}
+
+:root[data-theme="dark"] .header-label,
+:root[data-theme="dark"] .intro,
+:root[data-theme="dark"] .content-panel p {
+  color: #adbbb3;
+}
+
+.theme-toggle {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #b8c8bf;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.theme-toggle:focus-visible,
+.main-menu a:focus-visible,
+.menu-folder summary:focus-visible {
+  outline: 2px solid #318464;
+  outline-offset: 2px;
+}
+
+.page-layout {
+  display: grid;
+  min-height: calc(100vh - 60px);
+  grid-template-columns: 220px minmax(0, 1fr);
+}
+
+.sidebar {
+  padding: 1.5rem 1rem;
+  border-right: 1px solid #b8c8bf;
+  background: #fff;
+}
+
+.sidebar-title {
+  margin: 0 0 0.75rem;
+  color: #60766d;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.menu-tree,
+.submenu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu-tree > li + li {
+  margin-top: 0.5rem;
+}
+
+.main-menu a,
+.menu-folder summary {
+  display: block;
+  padding: 0.4rem 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.main-menu a[aria-current="page"] {
+  font-weight: bold;
+}
+
+.menu-folder summary {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submenu {
+  margin: 0.25rem 0 0 1rem;
+  padding-left: 0.75rem;
+  border-left: 1px solid #b8c8bf;
+}
+
+.submenu a {
+  font-weight: normal;
+}
+
+main {
+  width: min(100%, 1000px);
+  padding: 2rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.intro {
+  max-width: 65ch;
+  line-height: 1.6;
+}
+
+.content-panel {
+  max-width: 70ch;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #b8c8bf;
+}
+
+.content-panel h2 {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.content-panel p {
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    padding: 1rem;
+  }
+
+  .header-actions {
+    gap: 0.5rem;
+  }
+
+  .header-label {
+    display: none;
+  }
+
+  .page-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    padding: 1rem;
+    border-right: 0;
+    border-bottom: 1px solid #b8c8bf;
+  }
+
+  main {
+    padding: 1.5rem 1rem;
+  }
+}

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f7f5">
+    <title>BiomassDetection</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <p class="brand">Biomass<span>Detection</span></p>
+      <div class="header-actions">
+        <span class="header-label">Projektübersicht</span>
+        <button class="theme-toggle" type="button" aria-pressed="false">
+          Darkmode
+        </button>
+      </div>
+    </header>
+
+    <div class="page-layout">
+      <!-- ===== SEITENLEISTE / HAUPTMENÜ: Ab hier beginnt die Navigation ===== -->
+      <aside class="sidebar" aria-label="Seitenleiste">
+        <p class="sidebar-title">Hauptmenü</p>
+        <nav class="main-menu" aria-label="Hauptmenü">
+          <ul class="menu-tree">
+            <li>
+              <a href="index.html" aria-current="page">Übersicht</a>
+            </li>
+            <li>
+              <details class="menu-folder">
+                <summary>Walkthrough</summary>
+                <ul class="submenu">
+                  <li><a href="walkthrough/projekt.html">Projekt kennenlernen</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details class="menu-folder">
+                <summary>DIY</summary>
+                <ul class="submenu">
+                  <li><a href="diy/sensor.html">Sensor</a></li>
+                  <li><a href="diy/boje.html">Boje</a></li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <!-- ===== SEITENLEISTE / HAUPTMENÜ: Hier endet die Navigation ===== -->
+
+      <main id="uebersicht">
+        <p class="eyebrow">Bioglow · Gewässerüberwachung</p>
+        <h1>Übersicht</h1>
+        <p class="intro">
+          BiomassDetection ist ein Projekt zur Erkennung hoher Biomassewerte in
+          kleinen Gewässern. Diese Seite gibt eine kurze Einleitung zum Projekt.
+        </p>
+
+        <section class="content-panel" aria-labelledby="welcome-title">
+          <h2 id="welcome-title">Willkommen</h2>
+          <p>
+            Im Walkthrough erklären wir das Projekt. Im DIY-Bereich findest du
+            Schritt-für-Schritt-Anleitungen für Sensor und Boje.
+          </p>
+        </section>
+      </main>
+    </div>
+    <script src="js/theme.js" defer></script>
+  </body>
+</html>
